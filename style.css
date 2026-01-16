@@ -1,0 +1,299 @@
+:root{
+  --ink: #f4f2ef;
+  --edge: rgba(255,255,255,0.08);
+}
+
+html,
+body{
+  margin: 0;
+  height: 100%;
+  background: #050608;
+  font-family: Georgia, "Times New Roman", serif;
+  overflow: hidden;
+}
+
+#canvas-wrapper{
+  position: fixed;
+  inset: 0;
+}
+
+/* === Cover === */
+#cover{
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 80;
+  color: var(--ink);
+  cursor: pointer;
+  transition: opacity 360ms ease;
+}
+
+#cover::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 20%, rgba(255,255,255,0.10), transparent 52%),
+    radial-gradient(circle at 70% 70%, rgba(255,255,255,0.08), transparent 58%),
+    linear-gradient(180deg, #0b0c10 0%, #050608 60%, #020203 100%);
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+#cover::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(90,170,255,0.12), transparent 60%),
+    radial-gradient(circle at 80% 60%, rgba(120,220,255,0.10), transparent 62%),
+    linear-gradient(120deg, rgba(255,255,255,0.04), rgba(255,255,255,0));
+  mix-blend-mode: screen;
+  opacity: 0.3;
+  animation: coverDrift 14s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+#cover.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.cover-inner{
+  text-align: center;
+  padding: 28px 36px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title: "Wuwei Engine" */
+.cover-title{
+  font-size: 60px;
+  letter-spacing: 0.12em;
+  text-transform: none;
+  font-weight: 600;
+  font-family: "Caslon", "Adobe Caslon Pro", "Big Caslon", "Libre Caslon Text", Georgia, serif;
+}
+
+/* Subtitle: "无为" */
+.cover-subtitle{
+  margin-top: 4px;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  color: var(--ink);
+}
+
+/* Container: left/right instruction UI */
+.cover-actions{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+/* Instruction text container: "left hold" / "right tap" */
+.cover-ui{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(164, 232, 230);
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 68px;
+}
+
+.cover-ui span{
+  display: block;
+}
+
+/* Glass pill behind "left hold" / "right tap" */
+.cover-orb{
+  width: 110px;
+  height: 48px;
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.22);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  backdrop-filter: blur(26px) saturate(180%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  text-align: center;
+  padding-top: 0;
+}
+
+/* Instruction text inside glass pill */
+.cover-orb span{
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  transform: translateY(12px);
+}
+
+
+/* Intro paragraph at bottom of cover */
+.cover-panel{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: none;
+  padding: 16px 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.16);
+  backdrop-filter: blur(22px) saturate(180%);
+  z-index: 1;
+}
+
+
+body.is-locked #verse-panel{
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+body.is-locked #chaos-levels{
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* === Bottom Verse Panel (stored text) === */
+#verse-panel{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 20px 30px;
+  box-sizing: border-box;
+  z-index: 50;
+  pointer-events: none;
+
+  border-top: 1px solid rgba(255,255,255,0.22);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.01));
+  box-shadow:
+    0 -10px 36px rgba(0,0,0,0.35),
+    inset 0 1px 0 rgba(255,255,255,0.18);
+  backdrop-filter: blur(26px) saturate(180%);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+/* chaos level labels */
+#chaos-levels{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 92px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #000000;
+  pointer-events: none;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+#chaos-level-hold,
+#chaos-level-tap{
+  color: #000000;
+}
+
+/* current verse */
+#verse-cn{
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: rgb(255, 255, 255, 1);
+  font-weight: 600;
+}
+
+#verse-en{
+  margin-top: 2px;
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.10em;
+  text-transform: none;
+  color: rgba(244,242,239,1);
+}
+
+
+@keyframes coverDrift{
+  0% { transform: translate3d(-2%, -1%, 0); }
+  100% { transform: translate3d(2%, 1%, 0); }
+}
+
+/* optional: different vibe by mode */
+#verse-panel[data-mode="chaos"]{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02));
+}
+
+#verse-panel[data-mode="calm"]{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.09), rgba(255,255,255,0.01));
+}
+
+@media (max-width: 768px){
+  .cover-inner{
+    padding: 22px 20px;
+    width: min(84vw, 360px);
+  }
+
+  .cover-title{
+    font-size: 34px;
+    letter-spacing: 0.1em;
+  }
+
+  .cover-subtitle{
+    font-size: 16px;
+    letter-spacing: 0.16em;
+  }
+
+  .cover-ui{
+    font-size: 12px;
+  }
+  .cover-panel{
+    padding: 14px 16px;
+    font-size: 11px;
+  }
+}
+
+/* mobile safe area */
+@supports (padding: max(0px)){
+  #verse-panel{
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Flow Field · Wu Wei / Chaos</title>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <div id="cover" role="button" aria-label="Click to enter">
+      <div class="cover-inner">
+        <div class="cover-title">Wuwei Engine</div>
+        <div class="cover-subtitle">无为</div>
+        <div class="cover-actions" aria-label="Start modes">
+          <div class="cover-ui">
+            <span class="cover-orb">
+              <span>left</span>
+              <span>hold</span>
+            </span>
+          </div>
+          <div class="cover-ui">
+            <span class="cover-orb">
+              <span>right</span>
+              <span>tap</span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="cover-panel" aria-label="Project intro">
+        Wu Wei / Chaos is a flow-field–based generative system.<br />
+        Through particles, noise, and temporal accumulation, it explores the tension between action and non-action.
+        Rather than pursuing efficiency or control, the system treats user input as a disturbance.<br />
+        Each press injects chaos into the field;
+        each moment of release allows the system to gradually return to calm.
+        Visual motion, colour, and text together form a continuously evolving state,
+        inviting the user to explore the balance between intervention and letting go.
+      </div>
+    </div>
+
+    <!-- Canvas mount point -->
+    <div id="canvas-wrapper"></div>
+
+    <div id="chaos-levels" aria-label="Chaos levels">
+      <div id="chaos-level-hold">hold chaos level: 0.000</div>
+      <div id="chaos-level-tap">tap chaos level: 0.000</div>
+    </div>
+
+    <!-- Bottom Verse Panel -->
+    <section id="verse-panel" data-mode="calm" aria-label="Verse panel">
+      <div>
+        <!-- Initial text is updated at runtime in sketch.js -->
+        <div id="verse-cn">无为而无不为。</div>
+        <div id="verse-en">By non-action, nothing is left undone.</div>
+      </div>
+    </section>
+
+    <script src="Agent.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+{
+  "verses": [
+    {
+      "id": 1,
+      "cn": "为者败之，执者失之。",
+      "en": "Those who act upon things, ruin them; those who cling to things, lose them.",
+      "emotion": "chaos",
+      "colorHSB": [15, 80, 95],
+      "weight": 1.0
+    },
+    {
+      "id": 2,
+      "cn": "无为而无不为。",
+      "en": "By non-action, nothing is left undone.",
+      "emotion": "calm",
+      "colorHSB": [180, 25, 90],
+      "weight": 1.0
+    },
+    {
+      "id": 3,
+      "cn": "反者道之动。",
+      "en": "Reversal is the movement of the Dao.",
+      "emotion": "cycle",
+      "colorHSB": [210, 40, 95],
+      "weight": 0.8
+    },
+    {
+      "id": 4,
+      "cn": "上善若水。",
+      "en": "The highest goodness is like water.",
+      "emotion": "water",
+      "colorHSB": [190, 50, 95],
+      "weight": 0.8
+    },
+    {
+      "id": 5,
+      "cn": "大音希声，大象无形。",
+      "en": "Great sound is hard to hear; great form has no shape.",
+      "emotion": "silence",
+      "colorHSB": [50, 10, 95],
+      "weight": 0.6
+    },
+    {
+      "id": 6,
+      "cn": "持而盈之，不如其已。",
+      "en": "Fill a vessel to the brim, and it will spill over.",
+      "emotion": "overflow",
+      "colorHSB": [10, 70, 95],
+      "weight": 0.7
+    },
+    {
+      "id": 7,
+      "cn": "少则得，多则惑。",
+      "en": "With little, one gains; with much, one is confused.",
+      "emotion": "warning",
+      "colorHSB": [330, 40, 90],
+      "weight": 0.9
+    }
+  ]
+}
