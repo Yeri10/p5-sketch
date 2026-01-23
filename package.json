@@ -1,0 +1,21 @@
+{
+  "name": "p5-sketch",
+  "version": "1.0.0",
+  "description": "Wuwei Engine",
+  "main": "Agent.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yeri10/p5-sketch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yeri10/p5-sketch/issues"
+  },
+  "homepage": "https://github.com/Yeri10/p5-sketch#readme"
+}

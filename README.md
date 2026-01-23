@@ -48,7 +48,6 @@ Keyboard input is retained as a fallback to ensure the system works even without
 
 
 
-
 # Notes
 	•	The system is designed as a time-based process, not an outcome-driven visual.
 	•	Interaction influences system states gradually rather than triggering fixed results.
