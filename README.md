@@ -30,27 +30,26 @@ Keyboard input is retained as a fallback to ensure the system works even without
 
 
 # Tools Used
-	•	p5.js
-	•	Arduino
-	•	Web Serial API
-	•	HTML & CSS
-	•	Visual Studio Code
-	•	ChatGPT (AI tool)
+•	p5.js
+•	Arduino
+•	Web Serial API
+•	HTML & CSS
+•	Visual Studio Code
+•	ChatGPT (AI tool)
 
 
 
 # Files Overview
-	•	index.html — Main HTML file
-	•	sketch.js — Core p5.js logic and interaction handling
-	•	Agent.js — Agent class (particle behaviour, forces, movement)
-	•	verses.json — Text content used in the interface
-	•	README.md — Project instructions (this file)
+•	index.html — Main HTML file
+•	sketch.js — Core p5.js logic and interaction handling
+•	Agent.js — Agent class (particle behaviour, forces, movement)
+•	verses.json — Text content used in the interface
+•	README.md — Project instructions (this file)
 
 
 # Notes
-	•	The system is designed as a time-based process, not an outcome-driven visual.
-	•	Interaction influences system states gradually rather than triggering fixed results.
-	•	AI tools (ChatGPT) were used as learning support, not for direct code generation.
+•	The system is designed as a time-based process, not an outcome-driven visual.
+•	Interaction influences system states gradually rather than triggering fixed results.
 
 No other JavaScript libraries or shaders are used.
 
