@@ -46,8 +46,6 @@ Keyboard input is retained as a fallback to ensure the system works even without
 	•	verses.json — Text content used in the interface
 	•	README.md — Project instructions (this file)
 
-# Images
-
 
 # Notes
 	•	The system is designed as a time-based process, not an outcome-driven visual.
@@ -59,6 +57,5 @@ No other JavaScript libraries or shaders are used.
 # Author
 Yerie Ye
 
-
 # Video Link
-
+https://vimeo.com/1153428441?share=copy&fl=sv&fe=ci
