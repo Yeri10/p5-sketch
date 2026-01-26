@@ -18,13 +18,13 @@ User input introduces different levels of disturbance, allowing the system to sh
 
 # Interaction Instructions
 Keyboard Controls (always available)
-	•	Key 1 — Hold / Calm mode
+Key 1 — Hold / Calm mode
 Simulates sustained pressure (Update 1)
-	•	Key 2 — Tap / Chaos mode
+Key 2 — Tap / Chaos mode
 Simulates repeated tapping (Update 2)
-	•	Key F — Toggle fullscreen
-	•	Key S — Save a frame as PNG
-	•	Key C — Connect to Arduino via Web Serial
+Key F — Toggle fullscreen
+Key S — Save a frame as PNG
+Key C — Connect to Arduino via Web Serial
 
 Keyboard input is retained as a fallback to ensure the system works even without hardware connected.
 
@@ -46,6 +46,7 @@ Keyboard input is retained as a fallback to ensure the system works even without
 	•	verses.json — Text content used in the interface
 	•	README.md — Project instructions (this file)
 
+# Images
 
 
 # Notes
@@ -56,4 +57,8 @@ Keyboard input is retained as a fallback to ensure the system works even without
 No other JavaScript libraries or shaders are used.
 
 # Author
-Yerie Ye”
+Yerie Ye
+
+
+# Video Link
+
