@@ -59,4 +59,3 @@ This project uses the following tools and resources:
 •	p5.js
 •	p5.sound
 •	Arduino with the Web Serial API
-•	ChatGPT for coding assistance
