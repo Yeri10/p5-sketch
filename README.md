@@ -8,8 +8,6 @@ Yerie Ye
 Saturday, 10 January 2026
 
 
-
-
 # Description
 Wu-Wei Engine is an interactive generative system built with p5.js, inspired by the Daoist concept of Wu Wei (non-action).
 The project explores how human interaction can influence a system indirectly—by setting conditions rather than directly controlling visual outcomes.
@@ -37,16 +35,6 @@ Key C — Connect to Arduino via Web Serial
 Keyboard input is retained as a fallback to ensure the system works even without hardware connected.
 
 
-# Tools Used
-•	p5.js
-•	Arduino
-•	Web Serial API
-•	HTML & CSS
-•	Visual Studio Code
-•	ChatGPT (AI tool)
-
-
-
 # Files Overview
 •	index.html — Main HTML file
 •	sketch.js — Core p5.js logic and interaction handling
@@ -61,5 +49,14 @@ Keyboard input is retained as a fallback to ensure the system works even without
 
 No other JavaScript libraries or shaders are used.
 
+
 # Video Link
 https://vimeo.com/1153428441?share=copy&fl=sv&fe=ci
+
+
+# Acknowledgements
+This project uses the following tools and resources:
+•	p5.js
+•	p5.sound
+•	Arduino with the Web Serial API
+•	ChatGPT for coding assistance
