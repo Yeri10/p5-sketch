@@ -1,6 +1,11 @@
 # Project Title
 Wuwei Engine
 
+# Author
+Yerie Ye
+
+# Date
+Saturday, 10 January 2026
 
 # Description
 Wu-Wei Engine is an interactive generative system built with p5.js, inspired by the Daoist concept of Wu Wei (non-action).
@@ -52,9 +57,6 @@ Keyboard input is retained as a fallback to ensure the system works even without
 •	Interaction influences system states gradually rather than triggering fixed results.
 
 No other JavaScript libraries or shaders are used.
-
-# Author
-Yerie Ye
 
 # Video Link
 https://vimeo.com/1153428441?share=copy&fl=sv&fe=ci
