@@ -69,6 +69,7 @@ https://vimeo.com/1153428441?share=copy&fl=sv&fe=ci
 
 # Acknowledgements
 This project uses the following tools and resources:
+
 •	p5.js
 
 •	p5.sound
