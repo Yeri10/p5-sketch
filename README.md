@@ -5,7 +5,7 @@ Wuwei Engine
 Yerie Ye
 
 # Date
-Saturday, 10 January 2026
+ January 2026
 
 
 # Description
